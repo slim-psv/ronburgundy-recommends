@@ -1,0 +1,23 @@
+<html5> 
+
+<head>
+<title>Slim.ai Portal -- Getting Started -- Whiskey Barrel Pipeline</title>
+</head>
+
+<body>
+
+<div>
+<select name="list" onChange="window.location.href=this.value">
+<option selected>Choose a Whiskey</option>
+{% for w in whiskeys %}
+<option value="/sims/{{w}}">{{w}}</a></option>
+{% endfor %}
+</select>
+</div>
+
+<div> 
+<ol>{% for k,v in recs.items() %}<li><strong>{{k}}</strong> ({{v}})</li>{% endfor %}</ol>
+</div>
+</body> 
+
+</html5>
